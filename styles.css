@@ -9,7 +9,7 @@ body {
   font-family: sans-serif;
   background-color: #f7f7f7;
   text-align: center;
-  padding: 20px; /* kleine padding voor mobiele schermen */
+  padding: 20px;
 }
 
 /* Bounce animatie definitie */
@@ -20,7 +20,7 @@ body {
 
 /* Vlag styling */
 .vlag {
-  max-width: 90%;   /* past zich aan mobiele schermen aan */
+  max-width: 90%;
   height: auto;
   margin-bottom: 20px;
   animation: bounce 2s infinite;
@@ -55,10 +55,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-/* --------------------------
-   Responsive styling
-   voor mobiele schermen
-----------------------------*/
+/* Responsive styling voor mobiele schermen */
 @media (max-width: 600px) {
   h1 {
     font-size: 2rem;
@@ -79,6 +76,6 @@ h1 {
   }
 
   .vlag {
-    max-width: 95%; /* iets groter op kleinere schermen */
+    max-width: 95%;
   }
 }
