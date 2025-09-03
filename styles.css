@@ -1,59 +1,84 @@
+/* Algemene styling voor body */
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
   font-family: sans-serif;
   background-color: #f7f7f7;
   text-align: center;
+  padding: 20px; /* kleine padding voor mobiele schermen */
 }
 
-.vlag {
-  max-width: 300px;
-  height: auto;
-  margin-bottom: 20px;
-}
-
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-#status {
-  font-size: 4rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-#timer {
-  font-size: 2rem;
-  color: #555;
-}
 /* Bounce animatie definitie */
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-15px); }
 }
 
-/* Pas de animatie toe op de vlag */
+/* Vlag styling */
 .vlag {
-  max-width: 300px;
+  max-width: 90%;   /* past zich aan mobiele schermen aan */
   height: auto;
   margin-bottom: 20px;
-
-  animation: bounce 2s infinite; /* dit zorgt voor de continue bounce */
+  animation: bounce 2s infinite;
 }
+
+/* Titel */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Countdown status */
+#status {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Timer */
+#timer {
+  font-size: 2rem;
+  color: #555;
+}
+
+/* Quote onder countdown */
 #quote {
   font-size: 1.5rem;
   font-style: italic;
   color: #ff0066;
   text-align: center;
-
-  /* Ruimte boven de quote */
-  margin-top: 40px;  /* hier pas je de ruimte aan */
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
+/* --------------------------
+   Responsive styling
+   voor mobiele schermen
+----------------------------*/
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
 
+  #status {
+    font-size: 3rem;
+  }
 
+  #timer {
+    font-size: 1.5rem;
+  }
+
+  #quote {
+    font-size: 1.2rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+
+  .vlag {
+    max-width: 95%; /* iets groter op kleinere schermen */
+  }
+}
