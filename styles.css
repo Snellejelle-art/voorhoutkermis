@@ -1,0 +1,34 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.vlag {
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#status {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#timer {
+  font-size: 2rem;
+  color: #555;
+}
+
