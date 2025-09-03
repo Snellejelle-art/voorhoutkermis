@@ -2,6 +2,7 @@ const startDate = new Date('2025-09-06T09:30:00');
 
 const statusEl = document.getElementById('status');
 const timerEl = document.getElementById('timer');
+const quoteEl = document.getElementById('quote');
 
 function updateCountdown() {
   const now = new Date();
@@ -10,7 +11,14 @@ function updateCountdown() {
   if (diff <= 0) {
     statusEl.textContent = 'JA!';
     timerEl.textContent = 'De kermis is begonnen!';
-    clearInterval(interval);
+
+    // Confetti effect
+    confetti({
+      particleCount: 150,
+      spread: 70,
+      origin: { y: 0.6 }
+    });
+
     return;
   }
 
@@ -23,5 +31,5 @@ function updateCountdown() {
   timerEl.textContent = `${days} dagen ${hours} uur ${mins} min ${secs} sec`;
 }
 
-const interval = setInterval(updateCountdown, 1000);
+setInterval(updateCountdown, 1000);
 updateCountdown();
