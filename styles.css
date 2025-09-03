@@ -31,4 +31,19 @@ h1 {
   font-size: 2rem;
   color: #555;
 }
+/* Bounce animatie definitie */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* Pas de animatie toe op de vlag */
+.vlag {
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+
+  animation: bounce 2s infinite; /* dit zorgt voor de continue bounce */
+}
+
 
